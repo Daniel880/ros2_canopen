@@ -539,9 +539,9 @@ bool NodeCanopen402Driver<NODETYPE>::set_mode_velocity()
 {
   if (this->activated_.load())
   {
-    if (motor_->getMode() != MotorBase::Profiled_Velocity)
+    if (motor_->getMode() != MotorBase::Velocity)
     {
-      return motor_->enterModeAndWait(MotorBase::Profiled_Velocity);
+      return motor_->enterModeAndWait(MotorBase::Velocity);
     }
     else
     {
