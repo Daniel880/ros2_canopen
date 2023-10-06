@@ -159,6 +159,7 @@ struct Cia402Data
       case MotorBase::Interpolated_Position:
         driver->set_target(target_position);
         break;
+      case MotorBase::Velocity:
       case MotorBase::Profiled_Velocity:
       case MotorBase::Cyclic_Synchronous_Velocity:
         driver->set_target(target_velocity);
